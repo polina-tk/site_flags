@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флаги стран мира | База знаний и тесты</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient">
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" id="logo-link">
+                <!-- Ваше изображение как часть логотипа -->
+                <img src="img/flags-globe (1).png" 
+                    alt="Глобус с флагами" 
+                    style="height: 40px; width: auto; margin-right: 10px;">
+                <span class="text-gradient fw-bold">Флаги Мира</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-page="home">
+                            <i class="bi bi-house-door me-1"></i> Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="knowledge">
+                            <i class="bi bi-book me-1"></i> База знаний
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="test">
+                            <i class="bi bi-question-circle me-1"></i> Тесты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="results">
+                            <i class="bi bi-graph-up me-1"></i> Результаты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный контент -->
+    <main class="container py-4">
+        <!-- Главная страница -->
+        <section id="home-page" class="page active">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold mb-3 text-gradient">Изучайте флаги стран мира</h1>
+                <p class="lead text-muted">Интерактивная платформа для изучения флагов и проверки знаний</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-lg card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-globe-americas text-primary fs-1"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">База знаний</h3>
+                            <p class="card-text text-muted">Подробная информация о флагах стран с фильтрацией по регионам и континентам.</p>
+                            <a href="#" class="btn btn-outline-primary mt-2" data-page="knowledge">Изучать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-lg card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-brain text-success fs-1"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Интерактивные тесты</h3>
+                            <p class="card-text text-muted">Три типа тестов с различными уровнями сложности и системой оценки результатов.</p>
+                            <a href="#" class="btn btn-outline-success mt-2" data-page="test">Тестировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-lg card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-graph-up text-warning fs-1"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Отслеживание прогресса</h3>
+                            <p class="card-text text-muted">Детальная статистика, достижения и рекорды для мотивации к обучению.</p>
+                            <a href="#" class="btn btn-outline-warning mt-2" data-page="results">Статистика</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4"><i class="bi bi-mortarboard-fill me-2 text-primary"></i>Как это работает?</h3>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="step-number me-3">1</div>
+                                        <div>
+                                            <h5 class="h6 mb-2">Изучение</h5>
+                                            <p class="small text-muted mb-0">Просматривайте флаги стран в удобном каталоге</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="step-number me-3">2</div>
+                                        <div>
+                                            <h5 class="h6 mb-2">Практика</h5>
+                                            <p class="small text-muted mb-0">Проходите тесты для закрепления знаний</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="step-number me-3">3</div>
+                                        <div>
+                                            <h5 class="h6 mb-2">Анализ</h5>
+                                            <p class="small text-muted mb-0">Отслеживайте прогресс и улучшайте результаты</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- База знаний -->
+        <section id="knowledge-page" class="page">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 mb-0"><i class="bi bi-book me-2"></i>База знаний</h2>
+                <div class="d-flex gap-2">
+                    <div class="input-group" style="max-width: 300px;">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" id="search-input" placeholder="Поиск страны...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-lg mb-4">
+                <div class="card-body">
+                    <h5 class="card-title mb-3"><i class="bi bi-funnel me-2"></i>Фильтры</h5>
+                    <div class="d-flex flex-wrap gap-2" id="filter-buttons">
+                        <button class="btn btn-outline-primary filter-btn active" data-region="all">
+                            <i class="bi bi-globe me-1"></i> Все страны
+                        </button>
+                        <button class="btn btn-outline-primary filter-btn" data-region="europe">
+                            <i class="bi bi-building me-1"></i> Европа
+                        </button>
+                        <button class="btn btn-outline-primary filter-btn" data-region="asia">
+                            <i class="bi bi-mountain me-1"></i> Азия
+                        </button>
+                        <button class="btn btn-outline-primary filter-btn" data-region="africa">
+                            <i class="bi bi-sun me-1"></i> Африка
+                        </button>
+                        <button class="btn btn-outline-primary filter-btn" data-region="america">
+                            <i class="bi bi-globe-americas me-1"></i> Америка
+                        </button>
+                        <button class="btn btn-outline-primary filter-btn" data-region="oceania">
+                            <i class="bi bi-water me-1"></i> Океания
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="flags-container">
+            </div>
+        </section>
+
+        <!-- Тестирование -->
+        <section id="test-page" class="page">
+            <h2 class="h3 mb-4"><i class="bi bi-question-circle me-2"></i>Тестирование знаний</h2>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4"><i class="bi bi-sliders me-2"></i>Настройки теста</h5>
+                            
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Тип теста</label>
+                                <select class="form-select" id="test-type">
+                                    <option value="flag-to-country">Флаг → Страна</option>
+                                    <option value="country-to-flag">Страна → Флаг</option>
+                                    <option value="region-test">Тест по региону</option>
+                                    <option value="mixed">Смешанный тест</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Количество вопросов</label>
+                                <select class="form-select" id="question-count">
+                                    <option value="5">5 вопросов</option>
+                                    <option value="10" selected>10 вопросов</option>
+                                    <option value="15">15 вопросов</option>
+                                    <option value="20">20 вопросов</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Сложность</label>
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="difficulty" id="easy" value="easy" checked>
+                                    <label class="btn btn-outline-success" for="easy">Легкая</label>
+                                    
+                                    <input type="radio" class="btn-check" name="difficulty" id="medium" value="medium">
+                                    <label class="btn btn-outline-warning" for="medium">Средняя</label>
+                                    
+                                    <input type="radio" class="btn-check" name="difficulty" id="hard" value="hard">
+                                    <label class="btn btn-outline-danger" for="hard">Сложная</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-lg w-100" id="start-test-btn">
+                                <i class="bi bi-play-fill me-2"></i>Начать тест
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4">
+                            <div id="test-instructions">
+                                <h5 class="mb-4"><i class="bi bi-info-circle me-2 text-info"></i>Инструкция</h5>
+                                <p class="text-muted">Выберите параметры теста и нажмите "Начать тест". В тесте вам будут представлены вопросы с несколькими вариантами ответов.</p>
+                                
+                                <div class="alert alert-info">
+                                    <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Советы</h6>
+                                    <ul class="mb-0">
+                                        <li>Используйте режим "Флаг → Страна" для быстрого запоминания</li>
+                                        <li>Начинайте с малого количества вопросов</li>
+                                        <li>Регулярно проходите тесты для закрепления знаний</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="quiz-container" style="display: none;">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="mb-0">Вопрос <span id="current-question">1</span> из <span id="total-questions">10</span></h5>
+                                    <div class="progress" style="width: 200px; height: 8px;">
+                                        <div id="progress-bar" class="progress-bar bg-success" style="width: 0%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <div id="question-text" class="h4 mb-3"></div>
+                                    <div id="question-flag" class="display-1 mb-4"></div>
+                                </div>
+
+                                <div class="row g-3" id="options-container">
+                                    <!-- Варианты ответов будут загружены динамически -->
+                                </div>
+
+                                <div class="mt-4 text-center" id="feedback" style="display: none;">
+                                    <div class="alert" role="alert" id="feedback-message"></div>
+                                    <button class="btn btn-primary" id="next-question-btn" disabled>
+                                        <i class="bi bi-arrow-right me-2"></i>Следующий вопрос
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Результаты -->
+        <section id="results-page" class="page">
+            <h2 class="h3 mb-4"><i class="bi bi-graph-up me-2"></i>Результаты и статистика</h2>
+
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body">
+                            <div id="no-results" class="text-center py-5">
+                                <i class="bi bi-bar-chart text-muted" style="font-size: 4rem;"></i>
+                                <h5 class="mb-2 mt-3">Результатов пока нет</h5>
+                                <p class="text-muted mb-0">Пройдите тест, чтобы увидеть статистику</p>
+                            </div>
+
+                            <div id="results-content" style="display: none;">
+                                <div class="text-center mb-5">
+                                    <h4 class="mb-3">Результаты последнего теста</h4>
+                                    
+                                    <div class="position-relative d-inline-block mb-4">
+                                        <div id="score-circle" class="score-circle">
+                                            <div class="score-inner">
+                                                <div id="score-text" class="display-5 fw-bold">0/10</div>
+                                                <div id="score-percent" class="small text-muted">0%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 id="score-message" class="mb-4"></h5>
+                                    
+                                    <div class="row g-3">
+                                        <div class="col-4">
+                                            <div class="stat-card">
+                                                <div class="stat-value" id="correct-answers">0</div>
+                                                <div class="stat-label">Правильно</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="stat-card">
+                                                <div class="stat-value" id="wrong-answers">0</div>
+                                                <div class="stat-label">Неправильно</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="stat-card">
+                                                <div class="stat-value" id="time-spent">0:00</div>
+                                                <div class="stat-label">Время</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="results-details" class="mb-4">
+                                    <h5 class="mb-3">Детализация ответов</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Вопрос</th>
+                                                    <th>Ваш ответ</th>
+                                                    <th>Правильный ответ</th>
+                                                    <th>Статус</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="results-table">
+                                                <!-- Результаты будут загружены динамически -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button class="btn btn-primary me-2" id="retake-test">
+                                        <i class="bi bi-arrow-repeat me-2"></i>Пройти еще раз
+                                    </button>
+                                    <button class="btn btn-outline-secondary" id="share-results">
+                                        <i class="bi bi-share me-2"></i>Поделиться
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4"><i class="bi bi-trophy me-2"></i>Ваша статистика</h5>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Всего тестов</span>
+                                    <span id="total-tests" class="fw-bold">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Лучший результат</span>
+                                    <span id="best-score" class="fw-bold">0%</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Средний результат</span>
+                                    <span id="average-score" class="fw-bold">0%</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Пройдено вопросов</span>
+                                    <span id="total-questions-done" class="fw-bold">0</span>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-4">
+                            
+                            <h6 class="mb-3"><i class="bi bi-award me-2"></i>Достижения</h6>
+                            <div class="row g-2" id="achievements">
+                                <div class="col-4 text-center">
+                                    <div class="achievement locked">
+                                        <i class="bi bi-star fs-4 mb-2"></i>
+                                        <div class="small">Первый тест</div>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="achievement locked">
+                                        <i class="bi bi-trophy fs-4 mb-2"></i>
+                                        <div class="small">90% результат</div>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="achievement locked">
+                                        <i class="bi bi-lightning fs-4 mb-2"></i>
+                                        <div class="small">10 тестов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-flag-fill me-2 text-primary"></i>Флаги Мира
+                    </h5>
+                    <p class="text-muted">Образовательная платформа для изучения флагов стран мира. Все материалы представлены в учебных целях.</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text" data-page="home">Главная</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text" data-page="knowledge">База знаний</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text" data-page="test">Тестирование</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none hover-text" data-page="results">Результаты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Курсовой проект</h5>
+                    <p class="text-muted">"Разработка веб-приложения «База знаний и тестов по флагам стран мира»"</p>
+                </div>
+            </div>
+            
+        
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Подключение JS файлов -->
+    <script src="js/state.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/knowledge.js"></script>
+    <script src="js/modules/test.js"></script>
+    <script src="js/modules/results.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
