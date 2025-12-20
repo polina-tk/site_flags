@@ -1,0 +1,280 @@
+@import 'variables';
+@import 'components';
+@import 'responsive';
+
+// Основные стили
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-body;
+    background: $gradient-dark;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+// Градиенты
+.bg-gradient {
+    background: $gradient-dark;
+}
+
+.text-gradient {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+// Навигация
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba($dark-color, 0.95) !important;
+    
+    .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        border-radius: $border-radius-sm;
+        transition: all $transition-normal;
+        
+        &.active {
+            background: rgba($primary-color, 0.2);
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 20px;
+                height: 3px;
+                background: $primary-color;
+                border-radius: 2px;
+            }
+        }
+        
+        &:hover:not(.active) {
+            background: rgba(white, 0.1);
+        }
+    }
+}
+
+// Страницы
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease;
+    
+    &.active {
+        display: block;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Иконки
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba($primary-color, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    
+    i {
+        font-size: 2rem;
+    }
+}
+
+// Номер шага
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: $gradient-primary;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+// Карточка флага
+.flag-card {
+    transition: all $transition-normal;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    background: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.1);
+    
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: $shadow-xl;
+        border-color: $primary-color;
+    }
+    
+    .flag-emoji {
+        font-size: 4rem;
+        line-height: 1;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// Опции теста
+.option-btn {
+    padding: 1rem;
+    border: 2px solid rgba(white, 0.2);
+    border-radius: $border-radius-md;
+    background: rgba(white, 0.05);
+    color: white;
+    text-align: left;
+    transition: all $transition-fast;
+    cursor: pointer;
+    
+    &:hover:not(:disabled) {
+        border-color: $primary-color;
+        background: rgba($primary-color, 0.1);
+    }
+    
+    &.selected {
+        border-color: $primary-color;
+        background: rgba($primary-color, 0.2);
+    }
+    
+    &.correct {
+        border-color: $success-color;
+        background: rgba($success-color, 0.2);
+    }
+    
+    &.incorrect {
+        border-color: $danger-color;
+        background: rgba($danger-color, 0.2);
+    }
+    
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+}
+
+// Круг с результатами
+.score-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient($success-color 0% var(--score-percent, 0%), 
+                               rgba($success-color, 0.1) var(--score-percent, 0%) 100%);
+    position: relative;
+    margin: 0 auto;
+    box-shadow: $shadow-lg;
+    
+    .score-inner {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: $dark-color;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// Статистические карточки
+.stat-card {
+    background: rgba(white, 0.05);
+    border-radius: $border-radius-md;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(white, 0.1);
+    
+    .stat-value {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+    
+    .stat-label {
+        font-size: 0.875rem;
+        color: #adb5bd;
+    }
+}
+
+// Достижения
+.achievement {
+    padding: 0.75rem;
+    border-radius: $border-radius-md;
+    background: rgba(white, 0.05);
+    border: 2px solid rgba(white, 0.1);
+    transition: all $transition-normal;
+    
+    &.unlocked {
+        background: rgba($success-color, 0.1);
+        border-color: $success-color;
+        
+        i {
+            color: $success-color;
+        }
+    }
+    
+    &.locked {
+        opacity: 0.5;
+        
+        i {
+            color: #6c757d;
+        }
+    }
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Плавные ссылки
+.hover-text {
+    transition: color $transition-fast;
+    
+    &:hover {
+        color: $primary-color !important;
+    }
+}
+
+// Кастомный скроллбар
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(white, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 5px;
+    
+    &:hover {
+        background: darken($primary-color, 10%);
+    }
+}

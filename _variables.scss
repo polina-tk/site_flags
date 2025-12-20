@@ -1,0 +1,35 @@
+// Цветовая палитра
+$primary-color: #4361ee;
+$secondary-color: #3f37c9;
+$accent-color: #f72585;
+$success-color: #4cc9f0;
+$warning-color: #f8961e;
+$danger-color: #f94144;
+$dark-color: #212529;
+$light-color: #f8f9fa;
+
+// Градиенты
+$gradient-primary: linear-gradient(135deg, $primary-color, $secondary-color);
+$gradient-dark: linear-gradient(135deg, #1a1a2e, #16213e);
+$gradient-success: linear-gradient(135deg, $success-color, #4895ef);
+
+// Тени
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+// Скругления
+$border-radius-sm: 0.375rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+
+// Анимации
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Шрифты
+$font-heading: 'Montserrat', sans-serif;
+$font-body: 'Poppins', sans-serif;

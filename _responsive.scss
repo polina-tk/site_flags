@@ -1,0 +1,54 @@
+// Мобильные устройства
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .score-circle {
+        width: 150px;
+        height: 150px;
+        
+        .score-inner {
+            width: 120px;
+            height: 120px;
+            
+            .display-5 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    .flag-card {
+        .flag-emoji {
+            font-size: 3rem;
+        }
+    }
+    
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Планшеты
+@media (max-width: 992px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .features .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Десктоп
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
