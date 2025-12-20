@@ -1,0 +1,10 @@
+{
+  "name": "flags-learning-app",
+  "version": "1.0.0",
+  "description": "База знаний и тестов по флагам стран мира",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://yourusername.github.io/flags"
+}
